@@ -10,7 +10,5 @@
     <br>'username' => 'root',
     <br>'password' => '', 
 <br>
-<br>3.Запуски yii-приложений:
+<br>3.Запуски yii-приложения:
 <br>/workwers 
-<br>/cartree 
-<br>/refrigerator 
