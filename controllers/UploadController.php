@@ -12,6 +12,7 @@ class UploadController extends Controller
 {
     public function actionIndex()
     {
+
         $model_uploud = new Upload();
 
         if (Yii::$app->request->isPost) {
@@ -28,5 +29,6 @@ class UploadController extends Controller
             }
         }
         return $this->renderPartial('upload', ['model_uploud' => $model_uploud]);
+        
     }
 }
