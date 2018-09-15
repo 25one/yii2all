@@ -1,0 +1,67 @@
+.content, .form {
+width:100%;
+}
+
+.form_refrigerator {
+margin:0px;
+padding:0px;
+}
+
+.table {
+display:table;
+}
+
+.table_row {
+display:table-row;
+}
+
+.table_cell {
+display:table-cell;
+width:20%;
+}
+
+.title_table {
+background-color:grey;
+color:white;
+font-weight:bolder;
+}
+
+.title_error {
+color:red;
+font-weight:bolder;
+}
+
+.center {
+text-align:center;
+}
+
+.color {
+color:lightblue;
+}
+
+.red {
+color:red;
+}
+
+.orange {
+color:orange;
+}
+
+.green {
+color:green;
+}
+
+.buy_date, .make_date, .limit_date {
+width:9em;
+}
+
+.name_title {
+width:12em;	
+}
+
+.fa.fa-delete, .fa.fa-update {
+text-align:center;
+}
+
+
+
