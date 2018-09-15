@@ -17,6 +17,15 @@ class m180915_190150_project extends Migration
             'id' => Schema::TYPE_PK,
             'name' => Schema::TYPE_STRING,
         ]);
+        $this->batchInsert('project', ['name'], [
+          ['ПРОЕКТ 1'],
+          ['ПРОЕКТ 2'],
+          ['ПРОЕКТ 3'],
+          ['ПРОЕКТ 4'],
+          ['ПРОЕКТ 5'],
+          ['ПРОЕКТ 6'],
+          ['ПРОЕКТ 7'],          
+        ]);
     }
 
     /**
