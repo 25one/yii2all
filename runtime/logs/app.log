@@ -69413,3 +69413,93 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1536780005.495
     'REQUEST_TIME' => 1536780005
 ]
+2018-09-15 19:06:43 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2-basic.project' doesn't exist' in /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Command.php:1258
+Stack trace:
+#0 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Command.php(1258): PDOStatement->execute()
+#1 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /home/alex/www/yii2-basic/controllers/WorkerController.php(103): yii\db\ActiveQuery->all()
+#6 [internal function]: app\controllers\WorkerController->actionListworkers('<span class="st...')
+#7 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#8 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#9 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#10 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#11 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/alex/www/yii2-basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2-basic.project' doesn't exist
+The SQL being executed was: SELECT `worker`.`id`, `worker`.`name`, `photo`, `sociability`, `engineering`, `timemanagement`, `languages`, `project`.`name` AS `name_project`, count(`workerproject`.`id_worker`) as result FROM `worker` LEFT JOIN `workerproject` ON `workerproject`.`id_worker` = `worker`.`id` LEFT JOIN `project` ON `project`.`id` = `workerproject`.`id_project` WHERE `worker`.`name` LIKE '%%' GROUP BY `worker`.`id`' in /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'SELECT `worker`...')
+#1 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Command.php(1148): yii\db\Command->internalExecute('<span class="st...')
+#2 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#3 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#5 /home/alex/www/yii2-basic/controllers/WorkerController.php(103): yii\db\ActiveQuery->all()
+#6 [internal function]: app\controllers\WorkerController->actionListworkers('<span class="st...')
+#7 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#8 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#9 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#10 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#11 /home/alex/www/yii2-basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/alex/www/yii2-basic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'yii2-basic.project' doesn't exist
+)
+
+2018-09-15 19:06:43 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '33eb2fe3d94586cb3d3a04d474718823e5a271b202ede8ef550e26cfef56264aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Vpc0bb1uoAhneNZs8j9XNYUf4F1qiIny\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'yii2-basic'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=33eb2fe3d94586cb3d3a04d474718823e5a271b202ede8ef550e26cfef56264aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Vpc0bb1uoAhneNZs8j9XNYUf4F1qiIny%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at yii2-basic Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'yii2-basic'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/alex/www/yii2-basic'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/alex/www/yii2-basic'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/alex/www/yii2-basic/web/index.php'
+    'REMOTE_PORT' => '35498'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/worker'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1537038403.123
+    'REQUEST_TIME' => 1537038403
+]
