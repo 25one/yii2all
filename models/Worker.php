@@ -12,11 +12,9 @@ class Worker extends ActiveRecord
 
     public function rules()
     {
-
        return [
           [['name'], 'required', 'message' => 'поле ФИО-обязательно'],
        ];
-       
     }
 
 }
